@@ -15,6 +15,6 @@ export const initialTickets = [
     id: "3",
     title: "Título do ticket 3",
     content: "Descrição do ticket 3",
-    status: "FECHADO" as const,
+    status: "FINALIZADO" as const,
   },
 ];
