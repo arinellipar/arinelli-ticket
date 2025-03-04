@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Header } from "@/components/header";
+import { ThemeProvider } from "@/components/themes/theme-provider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -15,8 +16,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "The Road to Next",
-  description: "My Road to Next application ...",
+  title: "Sistema de Tickets Fradema",
+  description: "Suporte para Fradema",
 };
 
 export default function RootLayout({
@@ -25,22 +26,25 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
+    <html suppressHydrationWarning lang="pt-br">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header />
-        <main
-          className="
-            min-h-screen flex-1
-            overflow-y-auto overflow-x-hidden
-            py-24 px-8
-            bg-secondary/20
-            flex flex-col
+        <ThemeProvider>
+          <Header />
+
+          <main
+            className="
+          min-h-screen flex-1
+          overflow-y-auto overflow-x-hidden
+          py-24 px-8
+          bg-secondary/20
+          flex flex-col
           "
-        >
-          {children}
-        </main>
+          >
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );

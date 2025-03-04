@@ -2,6 +2,7 @@ import { homePath, ticketsPath } from "@/paths";
 import { LucideTickets } from "lucide-react";
 import { buttonVariants } from "./ui/button";
 import Link from "next/link";
+import { ThemeSwitcher } from "./themes/theme-switcher";
 
 const Header = () => {
   return (
@@ -13,7 +14,7 @@ const Header = () => {
             w-full flex py-2.5 px-5 justify-between
           "
     >
-      <div>
+      <div className="flex items-center gap-x-2">
         {/* <Button asChild variant={"outline"}> */}
         <Link
           href={homePath()}
@@ -24,7 +25,8 @@ const Header = () => {
         </Link>
         {/* </Button> */}
       </div>
-      <div>
+      <div className="flex items-center gap-x-2">
+        <ThemeSwitcher />
         {/* <Button asChild variant={"outline"}> */}
         <Link
           href={ticketsPath()}
