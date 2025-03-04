@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import Link from "next/link";
 import { homePath, ticketsPath } from "@/paths";
 import { buttonVariants } from "@/components/ui/button";
+import { LucideTickets } from "lucide-react";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -27,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-br">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -43,9 +44,12 @@ export default function RootLayout({
             {/* <Button asChild variant={"outline"}> */}
             <Link
               href={homePath()}
-              className={buttonVariants({ variant: "outline" })}
+              className={buttonVariants({ variant: "ghost" })}
             >
-              Sistema de Ticket Fradema
+              <LucideTickets />
+              <h1 className="text-lg font-semibold">
+                Sistema de Ticket Fradema
+              </h1>
             </Link>
             {/* </Button> */}
           </div>
@@ -53,7 +57,7 @@ export default function RootLayout({
             {/* <Button asChild variant={"outline"}> */}
             <Link
               href={ticketsPath()}
-              className={buttonVariants({ variant: "outline" })}
+              className={buttonVariants({ variant: "default" })}
             >
               Tickets
             </Link>

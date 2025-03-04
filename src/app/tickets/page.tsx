@@ -9,11 +9,12 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
+import { LucideCircleCheck, LucideFileText, LucidePencil } from "lucide-react";
 
 const TICKET_ICONS = {
-  ABERTO: "A",
-  EM_ANDAMENTO: "E",
-  FINALIZADO: "F",
+  ABERTO: <LucideFileText />,
+  EM_ANDAMENTO: <LucidePencil />,
+  FINALIZADO: <LucideCircleCheck />,
 };
 
 const TicketsPage = () => {
