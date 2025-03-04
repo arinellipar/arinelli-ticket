@@ -1,10 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import Link from "next/link";
-import { homePath, ticketsPath } from "@/paths";
-import { buttonVariants } from "@/components/ui/button";
-import { LucideTickets } from "lucide-react";
+import { Header } from "@/components/header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -32,38 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav
-          className="
-            supports-backdrop-blur:bg-background/60
-            fixed left-0 right-0 top-0 z-20
-            border-b bg-background/95 backdrop-blur
-            w-full flex py-2.5 px-5 justify-between
-          "
-        >
-          <div>
-            {/* <Button asChild variant={"outline"}> */}
-            <Link
-              href={homePath()}
-              className={buttonVariants({ variant: "ghost" })}
-            >
-              <LucideTickets />
-              <h1 className="text-lg font-semibold">
-                Sistema de Ticket Fradema
-              </h1>
-            </Link>
-            {/* </Button> */}
-          </div>
-          <div>
-            {/* <Button asChild variant={"outline"}> */}
-            <Link
-              href={ticketsPath()}
-              className={buttonVariants({ variant: "default" })}
-            >
-              Tickets
-            </Link>
-            {/* </Button> */}
-          </div>
-        </nav>
+        <Header />
         <main
           className="
             min-h-screen flex-1
