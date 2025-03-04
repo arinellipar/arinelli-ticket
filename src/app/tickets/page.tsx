@@ -1,15 +1,7 @@
-import Link from "next/link";
 import { initialTickets } from "@/data";
-import { ticketPath } from "@/paths";
-import {
-  Card,
-  CardHeader,
-  CardFooter,
-  CardTitle,
-  CardContent,
-} from "@/components/ui/card";
-import { LucideCircleCheck, LucideFileText, LucidePencil } from "lucide-react";
+
 import Heading from "@/components/heading";
+import { TicketItem } from "@/features/ticket/components/ticket-item";
 
 const TicketsPage = () => {
   return (
