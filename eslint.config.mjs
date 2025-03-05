@@ -14,7 +14,7 @@ const eslintConfig = [
   ...compat.config({
     extends: ["next"],
     rules: {
-      "no-unused-vars": "off",
+      "typescript/no-unused-vars": "off",
     },
   }),
 ];
