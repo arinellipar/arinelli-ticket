@@ -18,7 +18,7 @@ const TicketPage = async ({ params }: TicketPageProps) => {
   if (!ticket) {
     return (
       <Placeholder
-        label="Ticket not found"
+        label="Ticket não encontrado"
         button={
           <Button asChild variant="outline">
             <Link href={ticketsPath()}>Voltar para Tickets</Link>
