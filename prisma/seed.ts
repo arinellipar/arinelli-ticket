@@ -4,19 +4,16 @@ const prisma = new PrismaClient();
 
 const tickets = [
   {
-    id: "1",
     title: "Título do ticket 1",
     content: "Descrição do ticket 1 from DB",
     status: "ABERTO" as const,
   },
   {
-    id: "2",
     title: "Título do ticket 2",
     content: "Descrição do ticket 2 from DB",
     status: "EM_ANDAMENTO" as const,
   },
   {
-    id: "3",
     title: "Título do ticket 3",
     content: "Descrição do ticket 3 from DB",
     status: "FINALIZADO" as const,
