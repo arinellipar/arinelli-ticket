@@ -6,7 +6,7 @@ type PlaceholderProps = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   icon?: React.ReactElement<any>;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  button: React.ReactElement<any>;
+  button?: React.ReactElement<any>;
 };
 
 const Placeholder = ({
